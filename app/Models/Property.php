@@ -18,6 +18,7 @@ class Property extends Model
         'user_id',
         'description',
         'isActive',
+        'area',
     ];
     public function features()
     {
@@ -27,9 +28,9 @@ class Property extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function districts()
+    public function provinces()
     {
-        return $this->belongsTo(District::class);
+        return $this->belongsTo(Province::class);
     }
     public function calendars()
     {

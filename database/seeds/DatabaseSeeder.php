@@ -45,5 +45,51 @@ class DatabaseSeeder extends Seeder
                 'created_at'    => date("Y-m-d H:i:s")
             ]
         ]);
+        DB::table('types')->insert([
+            [
+                'name' => 'Cho thuê',
+            ],
+            [
+                'name' => 'Cho Bán',
+            ],
+        ]);
+        DB::table('features')->insert([
+            [
+                'name' => 'Nhà bếp',
+                'slug_name' => 'nha-bep',
+            ],
+            [
+                'name' => 'Giường ngủ',
+                'slug_name' => 'giuong-ngu',
+            ],
+            [
+                'name' => 'Tivi',
+                'slug_name' => 'tivi',
+            ],
+            [
+                'name' => 'Phòng tắm',
+                'slug_name' => 'phong-tam',
+            ],
+            [
+                'name' => 'Chỗ để xe',
+                'slug_name' => 'cho-de-xe',
+            ],
+            [
+                'name' => 'Ban công',
+                'slug_name' => 'ban-cong',
+            ],
+            [
+                'name' => 'Điều hòa',
+                'slug_name' => 'dieu-hoa',
+            ],
+            [
+                'name' => 'Bể bơi',
+                'slug_name' => 'be-boi',
+            ],
+            [
+                'name' => 'Lò sưởi',
+                'slug_name' => 'lo-suoi',
+            ],
+        ]);
     }
 }

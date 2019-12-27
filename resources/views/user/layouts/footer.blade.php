@@ -321,6 +321,6 @@
 <script src="{{ asset('user/js/ie10-viewport-bug-workaround.js') }}"></script>
 <!-- Custom javascript -->
 <script src="{{ asset('user/js/ie10-viewport-bug-workaround.js') }}"></script>
-
+@yield('js')
 </body>
 </html>

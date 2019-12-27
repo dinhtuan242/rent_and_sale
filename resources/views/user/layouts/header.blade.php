@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P5MJCCG');</script>
-    <!-- End Google Tag Manager -->
     <title>Rent and Sale</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -42,6 +35,7 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script type="text/javascript" src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="{{ asset('user/js/ie-emulation-modes-warning.js') }}"></script>
+    @yield('css')
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -50,11 +44,6 @@
     <![endif]-->
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5MJCCG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
 <div class="page_loader"></div>
 <!-- Top header start -->
 <header class="top-header hidden-xs" id="top">
@@ -105,7 +94,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="{{ route('homepage') }}" class="logo">
+                <a href="{{ route('homepage') }}">
                     <img src="{{ asset('user/img/logos/logo.png') }}" alt="logo">
                 </a>
             </div>
@@ -120,7 +109,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right rightside-navbar">
                     <li>
-                        <a href="submit-property.html" class="button">
+                        <a href="{{ route('property.create.get') }}" class="button">
                             Tạo mới tài sản
                         </a>
                     </li>
