@@ -3,8 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Model
+class User extends Authenticatable
 {
     protected $fillable = [
         'role_id',
@@ -23,4 +24,8 @@ class User extends Model
         return $this->belongsTo(Role::class);
     }
 
+    public function hasRole($role)
+    {
+        return $this->role->name == $role;
+    }
 }

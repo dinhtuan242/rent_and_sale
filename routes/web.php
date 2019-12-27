@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('user.homepages.index');
-});
+})->name('homepage');
+Auth::routes();
