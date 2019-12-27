@@ -15,6 +15,11 @@ class CreateCalendarsTable extends Migration
     {
         Schema::create('calendars', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('property_id');
+            $table->string('time', 255);
+            $table->string('phone', 11);
+            $table->string('email', 255);
+            $table->string('note', 255);
             $table->timestamps();
         });
     }
