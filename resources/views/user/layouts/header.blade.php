@@ -58,7 +58,7 @@
             @auth
                 <ul class="nav navbar-nav navbar-right rightside-navbar" style="height: 40px;">
                     <li style="margin-top: -15px;">
-                        <a href="" class="button">
+                        <a href="{{ route('user.index', Auth::user()->id) }}" class="button">
                             {{ Auth::user()->name }}
                         </a>
                     </li>

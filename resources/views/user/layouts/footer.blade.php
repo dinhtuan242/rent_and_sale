@@ -223,9 +223,6 @@
                                         <div class="item">
                                             <img src="{{ asset('user/img/properties/properties-6.jpg') }}" alt="Hyundai Santa">
                                         </div>
-                                        <div class="item active">
-                                            <iframe class="modalIframe" src="https://www.youtube.com/embed/5e0LxrLSzok" allowfullscreen></iframe>
-                                        </div>
                                     </div>
 
                                     <a class="control control-prev" href="#properties-carousel" role="button" data-slide="prev">
