@@ -10,7 +10,7 @@ class Type extends Model
         'name',
     ];
 
-    public function property()
+    public function properties()
     {
         return $this->hasMany(Property::class);
     }
