@@ -170,4 +170,16 @@ class PropertyController extends Controller
         }
         return redirect()->route('user.property', Auth::user()->id);
     }
+
+    public function detail(Request $request)
+    {
+        $property = $this->property->whereId($request['id'])->first();
+        $recentProperty = $this->property->whereTypeId($property['type_id'])->get();
+        $feature = $this->feature->all();
+        return view('user.property.detail', compact([
+            'property',
+            'feature',
+            'recentProperty',
+        ]));
+    }
 }

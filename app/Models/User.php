@@ -28,4 +28,9 @@ class User extends Authenticatable
     {
         return $this->role->name == $role;
     }
+
+    public function properties()
+    {
+        return $this->hasMany(Property::class);
+    }
 }

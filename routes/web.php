@@ -19,6 +19,7 @@ Auth::routes();
 Route::group(['prefix' => 'property'], function () {
     Route::get('/create', 'User\PropertyController@create')->name('property.create.get');
     Route::post('/create', 'User\PropertyController@store')->name('property.create.post');
+    Route::get('{id}', 'User\PropertyController@detail')->name('property.detail');
 });
 Route::group(['prefix' => 'user'], function () {
     Route::get('{id}', 'User\UserController@index')->name('user.index');

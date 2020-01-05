@@ -67,10 +67,6 @@ input[type=checkbox]:checked + label:before {
     color: #fff;
 }
 
-.property-content .facilities-list li i{
-    color: #95c41f;
-}
-
 .panel-box .panel-heading .panel-title a i{
     color: #95c41f;
 }

@@ -24,7 +24,7 @@ class Property extends Model
     {
         return $this->belongsToMany(Feature::class)->withTimestamps();
     }
-    public function users()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
@@ -36,7 +36,7 @@ class Property extends Model
     {
         return $this->belongsTo(Calendar::class);
     }
-    public function types()
+    public function type()
     {
         return $this->belongsTo(Type::class);
     }
